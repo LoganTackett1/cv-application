@@ -3,31 +3,22 @@ import './App.css'
 import InputSection from './InputSection';
 import OutputSection from './OutputSection';
 
+const initialState  = {
+  name: "",
+  email: "",
+  phone: "",
+  imgUrl: "",
+  education: [],
+  experience: []
+};
 
 function App() {
-  const [inputState,setInputState] = useState({});
-
-  let currString = "";
-
-  for (let key of Object.keys(inputState)) {
-    currString += inputState[key];
-    currString += " ";
-  }
-
-  function setUserData (key) {
-    return (
-      (value) => {
-        const newState = {...inputState};
-        newState[key] = value;
-        setInputState(newState);
-      }
-    );
-  }
+  const [inputState,setInputState] = useState(initialState);
 
   return (
     <div className="app-container">
-      <InputSection dataSetter={setUserData}/>
-      <OutputSection value={currString}/>
+      <InputSection cvState={inputState} cvSetter={setInputState}/>
+      <OutputSection cvState={inputState}/>
     </div>
   )
 }

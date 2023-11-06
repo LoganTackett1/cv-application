@@ -1,16 +1,18 @@
 import './Input.css';
 
 // eslint-disable-next-line react/prop-types
-function Input ({dataSetter,labelId,label}) {
+function Input ({cvState,cvSetter,type,setParam,labelId,label}) {
 
     function handleChange (event) {
-        dataSetter(event.target.value);
+        const newState = {...cvState};
+        newState[setParam] = event.target.value;
+        cvSetter(newState);
     }
 
     return (
         <>
             <label htmlFor={labelId}>{label}</label>
-            <input name={labelId} id={labelId} type="text" onChange={handleChange}/>
+            <input value={cvState[setParam]} name={labelId} id={labelId} type={type} onChange={handleChange}/>
         </>
     )
 }
