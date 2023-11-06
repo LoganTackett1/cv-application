@@ -1,0 +1,22 @@
+#inputSection {
+    width: 95%;
+    height: 95%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
+    background-color: rgba(255, 0, 0, 0.233);
+}
+
+#inputSection {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+#inputSection::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}

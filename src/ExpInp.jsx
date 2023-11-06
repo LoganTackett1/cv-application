@@ -40,12 +40,20 @@ function ExpInp ({uuid,cvState,cvSetter}) {
 
     return (
         <div id="expInp">
-            <label htmlFor="title">Job Title:</label>
-            <input value={currExp.title} id="title" type="text" onChange={handleChange("title")}/>
-            <label htmlFor="start">Start Year:</label>
-            <input value={currExp.start} id="start" type="tel" onChange={handleChange("start")}/>
-            <label htmlFor="end">End Year:</label>
-            <input value={currExp.end} id="end" type="tel" onChange={handleChange("end")}/>
+            <div className='title'>
+                <label htmlFor="title">Job Title:</label>
+                <input value={currExp.title} id="title" type="text" onChange={handleChange("title")}/>
+            </div>
+            <div className='employer'>
+                <label htmlFor="employer">Employer:</label>
+                <input value={currExp.employer} id="employer" type="text" onChange={handleChange("employer")}/>
+            </div>
+            <div className='start-end'>
+                <label htmlFor="start">Start Year:</label>
+                <input value={currExp.start} id="start" type="tel" onChange={handleChange("start")}/>
+                <label htmlFor="end">End Year:</label>
+                <input value={currExp.end} id="end" type="tel" onChange={handleChange("end")}/>
+            </div>
             <button onClick={removeSelf}>Delete</button>
         </div>
     )

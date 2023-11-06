@@ -1,0 +1,60 @@
+#eduInp {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 255, 0.555);
+    display: grid;
+    grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#eduInp > div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding-right: 5px;
+}
+
+#eduInp label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#eduInp input {
+    width: 100%;
+    height: 20px;
+}
+
+#eduInp > .degree {
+    grid-area: 1/1/2/-1;
+}
+
+#eduInp > .school {
+    grid-area: 2/1/3/-1;
+}
+
+#eduInp > .start-end {
+    box-sizing: border-box;
+    grid-area: 3/1/-1/3;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#eduInp > .start-end > input {
+    width: 100px;
+}
+
+#eduInp > button {
+    grid-area: 3/3/-1/-1;
+}
+
+#eduInp > button {
+    width: 60px;
+    height: 30px;
+    justify-self: flex-end;
+    margin-right: 5px;
+}

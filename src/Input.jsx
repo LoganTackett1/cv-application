@@ -10,10 +10,10 @@ function Input ({cvState,cvSetter,type,setParam,labelId,label}) {
     }
 
     return (
-        <>
+        <div id="input">
             <label htmlFor={labelId}>{label}</label>
             <input value={cvState[setParam]} name={labelId} id={labelId} type={type} onChange={handleChange}/>
-        </>
+        </div>
     )
 }
 

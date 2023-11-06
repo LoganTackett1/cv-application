@@ -40,14 +40,20 @@ function EduInp ({uuid,cvState,cvSetter}) {
 
     return (
         <div id="eduInp">
-            <label htmlFor="degree">Degree/Certification:</label>
-            <input value={currEdu.degree} id="degree" type="text" onChange={handleChange("degree")}/>
-            <label htmlFor="school">School:</label>
-            <input value={currEdu.school} id="school" type="text" onChange={handleChange("school")}/>
-            <label htmlFor="start">Start Year:</label>
-            <input value={currEdu.start} id="start" type="tel" onChange={handleChange("start")}/>
-            <label htmlFor="end">End Year:</label>
+            <div className='degree'>
+                <label htmlFor="degree">Degree/Certification:</label>
+                <input value={currEdu.degree} id="degree" type="text" onChange={handleChange("degree")}/>
+            </div>
+            <div className='school'>
+                <label htmlFor="school">School:</label>
+                <input value={currEdu.school} id="school" type="text" onChange={handleChange("school")}/>
+            </div>
+            <div className='start-end'>
+                <label htmlFor="start">Start Year:</label>
+                <input value={currEdu.start} id="start" type="tel" onChange={handleChange("start")}/>
+                <label htmlFor="end">End Year:</label>
             <input value={currEdu.end} id="end" type="tel" onChange={handleChange("end")}/>
+            </div>
             <button onClick={removeSelf}>Delete</button>
         </div>
     )

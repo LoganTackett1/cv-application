@@ -34,6 +34,7 @@ function OutputSection ({ cvState }) {
                     <li key={item.uuid}>
                         <ul>
                             <li>Title : {item.title}</li>
+                            <li>Employer: {item.employer}</li>
                             <li>Started {item.start} and Ended {item.end}</li>
                         </ul>
                     </li>

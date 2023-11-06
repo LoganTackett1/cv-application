@@ -20,6 +20,7 @@ function InpBtn ({cvState,cvSetter,type}) {
             const newExp = {
                 uuid: generateUUID(),
                 title:"",
+                employer:"",
                 start:"",
                 end:""
             };
