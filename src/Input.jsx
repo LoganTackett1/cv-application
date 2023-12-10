@@ -5,7 +5,11 @@ function Input ({cvState,cvSetter,type,setParam,labelId,label}) {
 
     function handleChange (event) {
         const newState = {...cvState};
-        newState[setParam] = event.target.value;
+        if (setParam === "imgSrc") {
+            newState[setParam] = URL.createObjectURL(event.target.files[0]);
+        } else {
+            newState[setParam] = event.target.value;
+    }
         cvSetter(newState);
     }
 
