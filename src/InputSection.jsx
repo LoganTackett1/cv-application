@@ -6,6 +6,7 @@ import ExpInp from './ExpInp';
 
 // eslint-disable-next-line react/prop-types
 function InputSection ({cvState,cvSetter}) {
+
     return (
         <div id="inputSection">
             <Input cvState={cvState} cvSetter={cvSetter} type="text" setParam="name" labelId="name" label="Name:" />
